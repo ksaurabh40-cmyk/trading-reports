@@ -2,6 +2,41 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Morning Report - Monday, 29 June 2026</title><style>*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
 body{background:#0b0f1a;color:#e2e8f0;padding:16px}
+
+.dash-section{background:#111827;border:1px solid #1e293b;border-radius:14px;padding:14px;margin-bottom:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.dash-title{font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #1e2433}
+.dash-sub{font-size:10px;color:#475569;font-weight:500;margin-left:6px;letter-spacing:.3px}
+.cockpit-row{margin-bottom:14px;padding:10px;background:#0f172a;border-radius:8px}
+.cockpit-row:last-child{margin-bottom:0}
+.ck-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+.ck-sym{font-size:13px;font-weight:700;color:#f1f5f9}
+.ck-price{font-size:14px;font-weight:800;padding:2px 8px;border-radius:5px}
+.ck-price.zone-danger{background:#450a0a;color:#f87171}
+.ck-price.zone-warn{background:#1a0a00;color:#fb923c}
+.ck-price.zone-good{background:#052e16;color:#34d399}
+.ck-price.zone-target{background:#0c2e4f;color:#60a5fa}
+.ck-pnl{font-size:12px;font-weight:700;margin-left:auto}
+.ck-bar{height:10px;background:#1e2a3a;border-radius:5px;position:relative;margin-bottom:18px;margin-top:18px}
+.ck-zone{position:absolute;top:0;height:100%}
+.ck-zone-sl{background:#7f1d1d;border-radius:5px 0 0 5px}
+.ck-zone-mid{background:#1e3a5f}
+.ck-zone-tg{background:#14532d;border-radius:0 5px 5px 0}
+.ck-label{position:absolute;top:-18px;transform:translateX(-50%);font-size:9px;color:#94a3b8;font-weight:600;white-space:nowrap}
+.ck-label-sl{color:#fca5a5}
+.ck-label-tg{color:#86efac}
+.ck-marker{position:absolute;top:-3px;width:16px;height:16px;background:#fff;border:2px solid #0f172a;border-radius:50%;transform:translateX(-50%);box-shadow:0 0 8px rgba(255,255,255,.4)}
+.ck-status{font-size:9px;color:#64748b;text-transform:uppercase;letter-spacing:.5px;text-align:center;margin-top:4px}
+.glance{display:flex;align-items:center;gap:10px;padding:8px 10px;background:#0f172a;border-radius:8px;margin-bottom:6px}
+.glance:last-child{margin-bottom:0}
+.g-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+.g-body{flex:1;min-width:0}
+.g-line1{display:flex;justify-content:space-between;align-items:baseline}
+.g-sym{font-size:12px;font-weight:700;color:#f1f5f9}
+.g-price{font-size:13px;font-weight:800;color:#f8fafc}
+.g-line2{display:flex;justify-content:space-between;font-size:10px;color:#94a3b8;margin-top:2px;font-weight:600}
+.g-pnl{font-size:10px;font-weight:700}
+.g-sltg{font-size:9px;color:#475569;margin-top:2px}
+.g-spark{flex-shrink:0;display:flex;align-items:center}
 .rh{text-align:center;padding:14px 0 10px;border-bottom:1px solid #1e2433;margin-bottom:16px}
 .rt{font-size:18px;font-weight:800;color:#f8fafc}
 .rs{font-size:11px;color:#475569;margin-top:4px}
@@ -76,23 +111,23 @@ body{background:#0b0f1a;color:#e2e8f0;padding:16px}
 .up{color:#34d399}.dn{color:#f87171}.neutral{color:#94a3b8}.warn{color:#fb923c}
 .footer{text-align:center;font-size:11px;color:#334155;margin-top:20px;padding-top:14px;border-top:1px solid #1e2433;max-width:680px;margin-left:auto;margin-right:auto}
 @media(max-width:480px){.market-strip,.cap-strip{grid-template-columns:repeat(2,1fr)}.metric-grid,.tech-grid{grid-template-columns:repeat(2,1fr)}.pivot-row{grid-template-columns:repeat(4,1fr)}.sch-top{flex-direction:column}.sch-price{text-align:left}.sch-chg{text-align:left}}</style></head><body>
-<div class="rh"><div class="rt">Morning Report</div><div class="rs">Monday, 29 June 2026 · 08:11 AM IST</div></div>
+<div class="rh"><div class="rt">Morning Report</div><div class="rs">Monday, 29 June 2026 · 08:18 PM IST</div></div>
 <div class="market-strip"><div class="idx">
 <div class="idx-name">Nifty 50</div>
-<div class="idx-val">24,056</div>
-<div class="idx-chg up">▲ +0.14%</div>
+<div class="idx-val">23,946</div>
+<div class="idx-chg dn">▼ -0.46%</div>
 </div><div class="idx">
 <div class="idx-name">Bank Nifty</div>
-<div class="idx-val">58,177</div>
-<div class="idx-chg up">▲ +0.05%</div>
+<div class="idx-val">57,727</div>
+<div class="idx-chg dn">▼ -0.77%</div>
 </div><div class="idx">
 <div class="idx-name">Sensex</div>
-<div class="idx-val">77,100</div>
-<div class="idx-chg up">▲ +0.14%</div>
+<div class="idx-val">76,728</div>
+<div class="idx-chg dn">▼ -0.48%</div>
 </div><div class="idx">
 <div class="idx-name">USD/INR</div>
-<div class="idx-val">94</div>
-<div class="idx-chg up">▲ +0.09%</div>
+<div class="idx-val">95</div>
+<div class="idx-chg up">▲ +0.24%</div>
 </div></div>
 <div class="cap-strip">
 <div class="cs-item"><div class="cs-label">Own Capital</div><div class="cs-val">Rs2.0 L</div><div class="cs-sub neutral">3x MTF</div></div>
@@ -106,14 +141,46 @@ body{background:#0b0f1a;color:#e2e8f0;padding:16px}
 <div class="cs-item"><div class="cs-label">P&L</div><div class="cs-val up">+0.00%</div><div class="cs-sub neutral">Unrealized</div></div>
 <div class="cs-item"><div class="cs-label">Today</div><div class="cs-val up">N/A</div><div class="cs-sub neutral">Day move</div></div>
 </div>
-<div class="stock-selector"><div class="stock-pill active" onclick="showStock(0,this)">CHAMBLFERT <span class="pill-chg dn">-1.9%</span></div><div class="stock-pill " onclick="showStock(1,this)">ASIANENE <span class="pill-chg dn">-0.4%</span></div></div>
+<div class="dash-section">
+<div class="dash-title">👁 Watchlist <span class="dash-sub">30-day trend</span></div>
+<div class="glance">
+<div class="g-icon" style="background:#052e16;color:#34d399">CH</div>
+<div class="g-body">
+  <div class="g-line1">
+    <span class="g-sym">CHAMBLFERT</span>
+    <span class="g-price">Rs474.25</span>
+  </div>
+  <div class="g-line2">
+    <span class="up">+1.11%</span>
+    <span class="g-pnl neutral">Watching</span>
+  </div>
+  <div class="g-sltg">SL Rs474 . T Rs510</div>
+</div>
+<div class="g-spark"><svg width="80" height="30"></svg></div>
+</div><div class="glance">
+<div class="g-icon" style="background:#450a0a;color:#f87171">AS</div>
+<div class="g-body">
+  <div class="g-line1">
+    <span class="g-sym">ASIANENE</span>
+    <span class="g-price">Rs365.65</span>
+  </div>
+  <div class="g-line2">
+    <span class="dn">-0.72%</span>
+    <span class="g-pnl neutral">Watching</span>
+  </div>
+  <div class="g-sltg">SL Rs364 . T Rs386</div>
+</div>
+<div class="g-spark"><svg width="80" height="30"></svg></div>
+</div>
+</div>
+<div class="stock-selector"><div class="stock-pill active" onclick="showStock(0,this)">CHAMBLFERT <span class="pill-chg up">+1.1%</span></div><div class="stock-pill " onclick="showStock(1,this)">ASIANENE <span class="pill-chg dn">-0.7%</span></div></div>
 <div class="stock-card" id="card-0" style="display:block">
 <div class="stock-card-header">
   <div class="sch-top">
     <div><div class="sch-name">Chambal Fertilisers and Chemicals Limited</div><div class="sch-sym">CHAMBLFERT · NSE</div></div>
-    <div><div class="sch-price">Rs 469.15</div><div class="sch-chg dn">▼ -8.95 (-1.87%)</div></div>
+    <div><div class="sch-price">Rs 474.25</div><div class="sch-chg up">▲ +5.20 (+1.11%)</div></div>
   </div>
-  <div class="sch-sl-row"><div class="sch-sl"><div class="sch-sl-label">Stop Loss</div><div class="sch-sl-val warn">Rs 474 (-1.0%)</div></div><div class="sch-sl"><div class="sch-sl-label">Target</div><div class="sch-sl-val up">Rs 510 (+8.7%)</div></div></div>
+  <div class="sch-sl-row"><div class="sch-sl"><div class="sch-sl-label">Stop Loss</div><div class="sch-sl-val warn">Rs 474 (+0.1%)</div></div><div class="sch-sl"><div class="sch-sl-label">Target</div><div class="sch-sl-val up">Rs 510 (+7.5%)</div></div></div>
 </div>
 <div class="tab-bar">
   <div class="tab active" onclick="showTab(0,'price',this)">Price</div>
@@ -124,22 +191,22 @@ body{background:#0b0f1a;color:#e2e8f0;padding:16px}
 </div>
 <div class="tab-content" id="tab-0-price">
   <div class="metric-grid">
-    <div class="metric"><div class="metric-label">Day High</div><div class="metric-val">Rs480.40</div></div>
-    <div class="metric"><div class="metric-label">Day Low</div><div class="metric-val">Rs466.10</div></div>
-    <div class="metric"><div class="metric-label">Prev Close</div><div class="metric-val">Rs478.10</div></div>
-    <div class="metric"><div class="metric-label">Volume</div><div class="metric-val">6.81 L</div></div>
-    <div class="metric"><div class="metric-label">Vol Ratio</div><div class="metric-val">0.6x</div></div>
-    <div class="metric"><div class="metric-label">Mkt Cap</div><div class="metric-val">Rs188.0k Cr</div></div>
+    <div class="metric"><div class="metric-label">Day High</div><div class="metric-val">Rs476.95</div></div>
+    <div class="metric"><div class="metric-label">Day Low</div><div class="metric-val">Rs460.55</div></div>
+    <div class="metric"><div class="metric-label">Prev Close</div><div class="metric-val">Rs469.05</div></div>
+    <div class="metric"><div class="metric-label">Volume</div><div class="metric-val">7.35 L</div></div>
+    <div class="metric"><div class="metric-label">Vol Ratio</div><div class="metric-val">0.7x</div></div>
+    <div class="metric"><div class="metric-label">Mkt Cap</div><div class="metric-val">Rs190.0k Cr</div></div>
   </div>
   <div class="range-section">
     <div class="range-label"><span>52W Low: Rs400</span><span>52W Range</span><span>52W High: Rs581</span></div>
-    <div class="range-track"><div class="range-fill" style="width:38.4%;background:linear-gradient(90deg,#1d4ed8,#3b82f6)"></div><div class="range-dot" style="left:38.4%;background:#60a5fa"></div></div>
+    <div class="range-track"><div class="range-fill" style="width:41.2%;background:linear-gradient(90deg,#1d4ed8,#3b82f6)"></div><div class="range-dot" style="left:41.2%;background:#60a5fa"></div></div>
   </div>
   <a class="tv-btn" href="https://www.tradingview.com/chart/?symbol=NSE:CHAMBLFERT" target="_blank">Open TradingView Chart</a>
 </div>
 <div class="tab-content" id="tab-0-tech" style="display:none">
   <div class="tech-grid">
-    <div class="tech-item"><div class="tech-label">RSI (14)</div><div class="tech-val neutral">49.5</div><div class="tech-sub">Neutral</div></div>
+    <div class="tech-item"><div class="tech-label">RSI (14)</div><div class="tech-val neutral">52.3</div><div class="tech-sub">Neutral</div></div>
     <div class="tech-item"><div class="tech-label">Support</div><div class="tech-val up">Rs445</div><div class="tech-sub">20D low</div></div>
     <div class="tech-item"><div class="tech-label">Resistance</div><div class="tech-val dn">Rs498</div><div class="tech-sub">20D high</div></div>
   </div>
@@ -148,14 +215,14 @@ body{background:#0b0f1a;color:#e2e8f0;padding:16px}
     <span class="ma-badge badge-dn">200 DMA: N/A</span>
   </div>
   <div class="news-section-title">Pivot Points</div>
-  <div class="pivot-row"><div class="pv res"><div class="pv-label">R3</div><div class="pv-val dn">491</div></div><div class="pv res"><div class="pv-label">R2</div><div class="pv-val dn">486</div></div><div class="pv res"><div class="pv-label">R1</div><div class="pv-val dn">482</div></div><div class="pv pp"><div class="pv-label">PP</div><div class="pv-val neutral">478</div></div><div class="pv sup"><div class="pv-label">S1</div><div class="pv-val up">474</div></div><div class="pv sup"><div class="pv-label">S2</div><div class="pv-val up">469</div></div><div class="pv sup"><div class="pv-label">S3</div><div class="pv-val up">465</div></div></div>
+  <div class="pivot-row"><div class="pv res"><div class="pv-label">R3</div><div class="pv-val dn">492</div></div><div class="pv res"><div class="pv-label">R2</div><div class="pv-val dn">486</div></div><div class="pv res"><div class="pv-label">R1</div><div class="pv-val dn">478</div></div><div class="pv pp"><div class="pv-label">PP</div><div class="pv-val neutral">472</div></div><div class="pv sup"><div class="pv-label">S1</div><div class="pv-val up">463</div></div><div class="pv sup"><div class="pv-label">S2</div><div class="pv-val up">458</div></div><div class="pv sup"><div class="pv-label">S3</div><div class="pv-val up">449</div></div></div>
 </div>
 <div class="tab-content" id="tab-0-news" style="display:none"><div class="news-section-title">Company News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSVFtdjJaNVBSS1dHZlBaQy1qNno0RmRmWElMZGxKMk8zTUduSGdaT2NOQUxWVjBNbUFFR0x4SnhWRi1LbTNqdjFJOW1JVldvVl9mWmY3cDJmMHotRDlNSlZhUlBBOVVzZzdMUkU5akpBdE9ubV9LRzBVMFRIcnI2MTNnak9YSWtHaHlOLUF6NFhPWDNad2lJTmVPa3ZhSFpQUUtyaEFaSXZfZzdoeHpIdEh3MEd5QTR0X0VOTnpaVk9IR3l4R01rZjNwdDNSWERBMUE?oc=5" target="_blank" class="news-link"><div class="news-title">Premium Exchange confirms no encumbrance on Chambal Fertilisers shares in FY26 - scanx.trade</div></a><div class="news-date">Fri, 19 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQM0twWkpvUGFTVHg0MGt6b3JGWnJOVkZlbHEyUnVSY1I5NHotY0wxQVpXWmN2Wi1wT2I1VXlVR1ZaMFJ0LXJhYjl3NUZBQzVCSC1HXzFaVWIwRnJVNzloTm14TXU1Rm5zZ2tnZzVLZUVIZzFyLXc2d0VOemwtZ1ZqVVgybElsQ2RxaUgwMVZwNXlQQXNwRHVVSGFseGdGZHhFM1hrVUdSenRkS1NtX1lrbDEyY0h1THRRdENGSVNxc0hFQXZwLVU2NVFudUUtbGlCRnlKckdLdGk2U1ZIeW1BS2ZYUFNsam5D0gHwAUFVX3lxTE5jQW1yYXgxaU1xNDIxcDVvYkRacFRoS2VaV3piMHhMR0p1QUlGb2U5bTUxR2JuRFY4R0h0REZqQnh5WVk5aVg5OTZYYTNHck1TYnRvdHVkbWNmYW9tZE5sZDVMLXZOMnRiVVNwUGdrb0pPbHZaaUVQZjYxVzJqcVN4cHpCZ2xqUlZ6UGhaU2VFcUVvOWcyRl92Q29sZEFGZERBZzlJemhIQXlMZVJFUlR4VFJTekUxY0RFTGFoNlVicnEteTQ3dE1wRVVMSmFIaWdBSXVfcC0xV0Z1eXhzS2ZuR0VJY3lYaW5yS1dkR183LQ?oc=5" target="_blank" class="news-link"><div class="news-title">Fertiliser Stocks Rally As 12 Supply Vessels Resume Journey To India After Being Stranded At Strait Of Hormuz - NDTV Profit</div></a><div class="news-date">Mon, 22 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxOWThaNm9xY2EyMWVGRTlxWmlDSHd1cGZBWFpvcS1tanNXU2YyU2dYWnZaZko4cEo4S0g0YkthVVFUcjNGOXlnM3JWU3RTX05MVHFhWU1QT0lBVHpoV0tmSnNwUGZ3U2lVNDRBd2dobmNYRXljVGpleEFFVG51ZE9lVTVrNzBBQVU0ZFdoYzh6RUlQQTlGdnlqRTFGQTY1anFzRGJMRXlsWnlGTXZocThpUWpfUUhjclZ5R3lHZzQzcVU3Vkw3OFVWYWd5QmMtZDE4LTNuT1NNUlNucS04eXh6SjlPb090MFVsVkZSZll2bUNfN2pWQmFyZ29uMmHSAYICQVVfeXFMTmxJVVJyblJEUmpmN21TRzd2NURrQTBKOUtxVFkyNS1SUzR4YmxrOEYwV0k1aUFkMEZHa25RVVhZci1jRklJQlNqcFN1aTA1R0xETFhkSXg3R1ZPa1pWWUlCc1hyMGNUbnJMZnhpTWtQTmx6QTZGSVRUUFJzM3RhbjZtR2pxeEY2dzIwX2dMUnh0OHFHRHhEelNTTWVRRUc4N2ZGMDIxTTU2anhzZGJlWU1QbHJNREgxS0xSV3NLQTlBMkVkMkpaUXlVT3pUMTdBT1Jia1ZmbUdUbkgtNHZvWEY2YnZYTl9HZ2hHTXpmdGlELTFBUGtzbTJMU0NEaS1uMWNR?oc=5" target="_blank" class="news-link"><div class="news-title">Declining Stock and Decent Financials: Is The Market Wrong About Chambal Fertilisers and Chemicals Limited (NSE:CHAMBLFERT)? - simplywall.st</div></a><div class="news-date">Thu, 27 Nov 2025</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxNWnhCVGJBZG1fbkhMcXRObzlfanA4NTQwbGhCc3B6UlFNeUlramhmN0dPc19CNjBxMFFiWmJkVGd3Wlo4bjF4SzdkdFgtcG9jeTZkbGJmMDZxaUVrZXBGSDJHV254d2QxODVwRXU0dFJQdmZJT3gxd3VydjdjcGhUU0xha3lzQlN3cUdSVTlNWTlUVnNtaDBtZlRSbl9GRmtsZnllSlVkS1ZlQVdvdmNlUHQ3aVhUR1NiMVhoaUdPZFBuUE1NdkdfTHVKRjc0cXBjVUlseFJNTG9jOU9vYTkzdG85QWLSAeoBQVVfeXFMT1M4eS1mUzNIQThuc2tPaHNyRmlTekMzSTYxZXc3WlBNQUpZLUtqVUpEelJqejQwZVdfMTlnSWRNRm1heTZLcDFiSE83MXNNOVhzaE5DNm5xZjIxcGNyTjZIOWJUMlNQeS1VU2ZCYm9CbzNkNVlSQ1NZVDRINVkxdEp1aUMyMEJJdjZfcFk5M0N4bVI5UXhCTW4tSE0xaThPVFF1UDIzUXZIY2Z4SDY3dVd3cy1QbEJkSS1kWEpJRERzdGI0eU4zS1NxQms2dnpqZU5XRkJJWS1ZcXFDV1U3NTN2b1VnS2x6VlpR?oc=5" target="_blank" class="news-link"><div class="news-title">Stocks picks: Analyst suggest buying Bajaj Auto, Chambal Fertilisers - Business Standard</div></a><div class="news-date">Fri, 29 May 2026</div></div><div class="news-section-title">Industry News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNRzIwaHNidlBrNHdueE1ndWtSbWhSUjczUXhkWTc4SHNNZXhoYk9EUDNpc3JUcGIza2ZSa2hjVDAyQW5RMG1JV2FFT0pLV20zX3czOGI4OXJPNnY1RHZUcEk0U2pjWHhxamtmS0ZDbktFUXNZS3FCTlNkSGYxaXN4WV84SzRZWTh1X3BQb2Z5NkpNRm4wSlNFZ0hFbmxZajBsQy1hTjRYVWs1V19COU93NkxR?oc=5" target="_blank" class="news-link"><div class="news-title">Indian fertilizer, specialty chemical industries hit by US-Iran war - C&EN</div></a><div class="news-date">Fri, 20 Mar 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPeVhnaGdEdmNmcTY1b29JNWRlbThLOFBrdEx0SVFvdUZpendMbHVjZHcybWNOMXZQUzFPX3hwR0QyTkZGOVdGemJyQ0dvX3A1RTdpVjJkeVgxajFyT0ZOcnNxbzNQVlNYRmFsOXhqM0NkeHZVcTd3RjA2RTBIM3kwOFhfM2hvcnZTWExRZ1dFbTJqeEZZbVJEVk5XR1U?oc=5" target="_blank" class="news-link"><div class="news-title">India’s fertiliser security remains strong, stable, and well-managed: Govt - News On AIR</div></a><div class="news-date">Fri, 24 Apr 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxOUktvUzl5aTM2Q0NKbFlFRFdFeVNVRHlBR3pfNUs2Q0lsQnlFOUsyOUxsSWpUZ0xmY2VPNGNBc0Njdm9lTU82eG8xZTA3NEFmR1YxQ24xT0tVLUVudWhQcUVqUmVjYkJhVXFuYjJNS2w1TUM3eTNMTndDLWtzWG81eDNNeDZtNHA4RGtQMUNjUzFTQUNLaFBxLVBEWEhrWXE3UENFR2htN05xTXVhSXFhZ3Z2NzQ0anp3d2NoMld1cTJRTnJaUnZaS19zbENVTUVuYzFTQVI4MXJSOXl6NUlPRWdlcVlMVi1U?oc=5" target="_blank" class="news-link"><div class="news-title">Rashtriya Chemicals, Chambal Fertilisers, GNFC: Why fertiliser stocks jumped on March 10 - Upstox</div></a><div class="news-date">Tue, 10 Mar 2026</div></div></div>
-<div class="tab-content" id="tab-0-fin" style="display:none"><div class="fin-section-title">Quarterly Sales (Last 8 Quarters)</div><div class="fin-bars"><div class="fin-bar-item"><div class="fin-bar" style="height:46.15312646187432px"></div><div class="fin-bar-val">4,933</div><div class="fin-bar-label">Jun 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:40.66115702479338px"></div><div class="fin-bar-val">4,346</div><div class="fin-bar-label">Sep 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:46.01278652736629px"></div><div class="fin-bar-val">4,918</div><div class="fin-bar-label">Dec 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:22.912833307344457px"></div><div class="fin-bar-val">2,449</div><div class="fin-bar-label">Mar 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:53.31046312178388px"></div><div class="fin-bar-val">5,698</div><div class="fin-bar-label">Jun 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:60.0px"></div><div class="fin-bar-val">6,413</div><div class="fin-bar-label">Sep 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:55.181662248557615px"></div><div class="fin-bar-val">5,898</div><div class="fin-bar-label">Dec 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:26.056447840324342px"></div><div class="fin-bar-val">2,785</div><div class="fin-bar-label">Mar 2026</div></div></div><div class="fin-section-title">Annual Financials (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Sales</td><td>17,966</td><td>16,646</td><td>20,794</td></tr><tr><td>Operating Profit</td><td>2,047</td><td>2,501</td><td>2,678</td></tr><tr><td>Net Profit (PAT)</td><td>1,276</td><td>1,649</td><td>1,953</td></tr><tr><td>Interest</td><td>173</td><td>48</td><td>7</td></tr></table><div class="fin-section-title">Balance Sheet (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Gross Block</td><td>6,423</td><td>6,221</td><td>6,110</td></tr><tr><td>Total Debt</td><td>1,874</td><td>99</td><td>1,068</td></tr></table><div class="fin-section-title">Working Capital Days</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Receivable Days</td><td>4</td><td>8</td><td>36</td></tr><tr><td>Payable Days</td><td>27</td><td>25</td><td>26</td></tr><tr><td>Inventory Days</td><td>42</td><td>71</td><td>63</td></tr></table><div class="fin-section-title">Key Ratios</div><div class="ratio-grid"><div class="ratio-item"><div class="ratio-label">Stock P/E</div><div class="ratio-val">9.62</div></div><div class="ratio-item"><div class="ratio-label">ROCE</div><div class="ratio-val">25.5
+<div class="tab-content" id="tab-0-fin" style="display:none"><div class="fin-section-title">Quarterly Sales (Last 8 Quarters)</div><div class="fin-bars"><div class="fin-bar-item"><div class="fin-bar" style="height:46.15312646187432px"></div><div class="fin-bar-val">4,933</div><div class="fin-bar-label">Jun 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:40.66115702479338px"></div><div class="fin-bar-val">4,346</div><div class="fin-bar-label">Sep 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:46.01278652736629px"></div><div class="fin-bar-val">4,918</div><div class="fin-bar-label">Dec 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:22.912833307344457px"></div><div class="fin-bar-val">2,449</div><div class="fin-bar-label">Mar 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:53.31046312178388px"></div><div class="fin-bar-val">5,698</div><div class="fin-bar-label">Jun 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:60.0px"></div><div class="fin-bar-val">6,413</div><div class="fin-bar-label">Sep 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:55.181662248557615px"></div><div class="fin-bar-val">5,898</div><div class="fin-bar-label">Dec 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:26.056447840324342px"></div><div class="fin-bar-val">2,785</div><div class="fin-bar-label">Mar 2026</div></div></div><div class="fin-section-title">Annual Financials (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Sales</td><td>17,966</td><td>16,646</td><td>20,794</td></tr><tr><td>Operating Profit</td><td>2,047</td><td>2,501</td><td>2,678</td></tr><tr><td>Net Profit (PAT)</td><td>1,276</td><td>1,649</td><td>1,953</td></tr><tr><td>Interest</td><td>173</td><td>48</td><td>7</td></tr></table><div class="fin-section-title">Balance Sheet (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Gross Block</td><td>6,423</td><td>6,221</td><td>6,110</td></tr><tr><td>Total Debt</td><td>1,874</td><td>99</td><td>1,068</td></tr></table><div class="fin-section-title">Working Capital Days</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Receivable Days</td><td>4</td><td>8</td><td>36</td></tr><tr><td>Payable Days</td><td>27</td><td>25</td><td>26</td></tr><tr><td>Inventory Days</td><td>42</td><td>71</td><td>63</td></tr></table><div class="fin-section-title">Key Ratios</div><div class="ratio-grid"><div class="ratio-item"><div class="ratio-label">Stock P/E</div><div class="ratio-val">9.73</div></div><div class="ratio-item"><div class="ratio-label">ROCE</div><div class="ratio-val">25.5
         
           %</div></div><div class="ratio-item"><div class="ratio-label">ROE</div><div class="ratio-val">20.4
         
-          %</div></div><div class="ratio-item"><div class="ratio-label">Dividend Yield</div><div class="ratio-val">2.13
+          %</div></div><div class="ratio-item"><div class="ratio-label">Dividend Yield</div><div class="ratio-val">2.11
         
           %</div></div><div class="ratio-item"><div class="ratio-label">Book Value</div><div class="ratio-val">₹
         260</div></div></div></div>
@@ -164,9 +231,9 @@ body{background:#0b0f1a;color:#e2e8f0;padding:16px}
 <div class="stock-card-header">
   <div class="sch-top">
     <div><div class="sch-name">Asian Energy Services Limited</div><div class="sch-sym">ASIANENE · NSE</div></div>
-    <div><div class="sch-price">Rs 370.00</div><div class="sch-chg dn">▼ -1.65 (-0.44%)</div></div>
+    <div><div class="sch-price">Rs 365.65</div><div class="sch-chg dn">▼ -2.65 (-0.72%)</div></div>
   </div>
-  <div class="sch-sl-row"><div class="sch-sl"><div class="sch-sl-label">Stop Loss</div><div class="sch-sl-val warn">Rs 364 (+1.6%)</div></div><div class="sch-sl"><div class="sch-sl-label">Target</div><div class="sch-sl-val up">Rs 386 (+4.3%)</div></div></div>
+  <div class="sch-sl-row"><div class="sch-sl"><div class="sch-sl-label">Stop Loss</div><div class="sch-sl-val warn">Rs 364 (+0.5%)</div></div><div class="sch-sl"><div class="sch-sl-label">Target</div><div class="sch-sl-val up">Rs 386 (+5.6%)</div></div></div>
 </div>
 <div class="tab-bar">
   <div class="tab active" onclick="showTab(1,'price',this)">Price</div>
@@ -177,34 +244,34 @@ body{background:#0b0f1a;color:#e2e8f0;padding:16px}
 </div>
 <div class="tab-content" id="tab-1-price">
   <div class="metric-grid">
-    <div class="metric"><div class="metric-label">Day High</div><div class="metric-val">Rs376.45</div></div>
-    <div class="metric"><div class="metric-label">Day Low</div><div class="metric-val">Rs364.10</div></div>
-    <div class="metric"><div class="metric-label">Prev Close</div><div class="metric-val">Rs371.65</div></div>
-    <div class="metric"><div class="metric-label">Volume</div><div class="metric-val">1.37 L</div></div>
+    <div class="metric"><div class="metric-label">Day High</div><div class="metric-val">Rs374.00</div></div>
+    <div class="metric"><div class="metric-label">Day Low</div><div class="metric-val">Rs362.10</div></div>
+    <div class="metric"><div class="metric-label">Prev Close</div><div class="metric-val">Rs368.30</div></div>
+    <div class="metric"><div class="metric-label">Volume</div><div class="metric-val">1.27 L</div></div>
     <div class="metric"><div class="metric-label">Vol Ratio</div><div class="metric-val">0.3x</div></div>
-    <div class="metric"><div class="metric-label">Mkt Cap</div><div class="metric-val">Rs18.0k Cr</div></div>
+    <div class="metric"><div class="metric-label">Mkt Cap</div><div class="metric-val">Rs17.8k Cr</div></div>
   </div>
   <div class="range-section">
     <div class="range-label"><span>52W Low: Rs230</span><span>52W Range</span><span>52W High: Rs392</span></div>
-    <div class="range-track"><div class="range-fill" style="width:86.4%;background:linear-gradient(90deg,#1d4ed8,#3b82f6)"></div><div class="range-dot" style="left:86.4%;background:#60a5fa"></div></div>
+    <div class="range-track"><div class="range-fill" style="width:83.7%;background:linear-gradient(90deg,#1d4ed8,#3b82f6)"></div><div class="range-dot" style="left:83.7%;background:#60a5fa"></div></div>
   </div>
   <a class="tv-btn" href="https://www.tradingview.com/chart/?symbol=NSE:ASIANENE" target="_blank">Open TradingView Chart</a>
 </div>
 <div class="tab-content" id="tab-1-tech" style="display:none">
   <div class="tech-grid">
-    <div class="tech-item"><div class="tech-label">RSI (14)</div><div class="tech-val neutral">57.1</div><div class="tech-sub">Neutral</div></div>
+    <div class="tech-item"><div class="tech-label">RSI (14)</div><div class="tech-val neutral">55.3</div><div class="tech-sub">Neutral</div></div>
     <div class="tech-item"><div class="tech-label">Support</div><div class="tech-val up">Rs336</div><div class="tech-sub">20D low</div></div>
     <div class="tech-item"><div class="tech-label">Resistance</div><div class="tech-val dn">Rs392</div><div class="tech-sub">20D high</div></div>
   </div>
   <div class="ma-badges">
-    <span class="ma-badge badge-up">50 DMA: Rs338 (above)</span>
+    <span class="ma-badge badge-up">50 DMA: Rs340 (above)</span>
     <span class="ma-badge badge-dn">200 DMA: N/A</span>
   </div>
   <div class="news-section-title">Pivot Points</div>
-  <div class="pivot-row"><div class="pv res"><div class="pv-label">R3</div><div class="pv-val dn">392</div></div><div class="pv res"><div class="pv-label">R2</div><div class="pv-val dn">385</div></div><div class="pv res"><div class="pv-label">R1</div><div class="pv-val dn">379</div></div><div class="pv pp"><div class="pv-label">PP</div><div class="pv-val neutral">372</div></div><div class="pv sup"><div class="pv-label">S1</div><div class="pv-val up">365</div></div><div class="pv sup"><div class="pv-label">S2</div><div class="pv-val up">358</div></div><div class="pv sup"><div class="pv-label">S3</div><div class="pv-val up">352</div></div></div>
+  <div class="pivot-row"><div class="pv res"><div class="pv-label">R3</div><div class="pv-val dn">387</div></div><div class="pv res"><div class="pv-label">R2</div><div class="pv-val dn">382</div></div><div class="pv res"><div class="pv-label">R1</div><div class="pv-val dn">375</div></div><div class="pv pp"><div class="pv-label">PP</div><div class="pv-val neutral">370</div></div><div class="pv sup"><div class="pv-label">S1</div><div class="pv-val up">363</div></div><div class="pv sup"><div class="pv-label">S2</div><div class="pv-val up">357</div></div><div class="pv sup"><div class="pv-label">S3</div><div class="pv-val up">350</div></div></div>
 </div>
-<div class="tab-content" id="tab-1-news" style="display:none"><div class="news-section-title">Company News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOamtxejMwb3BoVjlQeVEzWVlYZWZrN1lJdURYVU1nUXoyTS1MNkZrNFlFZFhvblVYc0ZfUW1yZF9wR0dZQm44cjNfVlJXWDg4am5TdkJBcHB2czJITXRTaVo5b1o5VEtMLTNGVXN6U1lTMHdBMUdqUzZnLXB3MnhuSnZOUEg1cnFHU2k0cjdPcVMzdndLTmVsWi1FQmFIOGRxU000VEhQWE5kZW10RTZLU0ZsNjB5OGU5VW9iSXJJQXk?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services approves MD re-appointment via postal ballot - scanx.trade</div></a><div class="news-date">Fri, 26 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMDBIbFUzOUNnTHUySzBMZ1AzTUlLaFZRUTFUc3FsNFo0engwMlgwZFJmcm5uaE5MQ00zdUJWX0QyYTM4TWNoR0hJVmh6bHhRcExLaTIyWDZwUUJtWEFVS2U0RjhyUW5Kc2FxazJfQ1dVNE1oTlpVWVJGdkRJemxETXlzOVVWZnlzUXA4NTBpWEZ3WGRPVUVIblpFMXNLN0RuOUNhTTQ3ZHJBcEZyQUhEcnJINVVXV0dNbzZzVFBVOG0yc1B0UmNjeFdnM2lIUVZERkE2LUZob2xjVm55SzhV0gHkAUFVX3lxTE5ZRDd1MGx2dnJzTVVWaDFqZVdNSGVpNWo4UU93VXExOG8zVENYZnlRcENKdGJMWlhKQ3h0U2t0Z2xqS1pVYkpYWWhWZVNBUHRfbGItZ1NTUUxsOUxvRkNTN2JNV2hRTWE0aUg3ZnJIb0Z2SHVlYzJ4am82aUZRdGNUQ1VrMUZzdUJOMllXZjNNdEYwcjdPOFZNaUFqYmFxSlNyMFlzREhOLVlzVGFuVzVMQkNNaGk4bkJ4aDRkTkE2cTZMNEllZGFacnc5YW41dFBuOFE2UUFvZmFmLWFZZHZLS3JEMA?oc=5" target="_blank" class="news-link"><div class="news-title">Concerns Surrounding Asian Energy Services' (NSE:ASIANENE) Performance - simplywall.st</div></a><div class="news-date">Wed, 27 May 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbk1yNnBHU21leXhkMkZFb2ZtTGlxTl9NNWxiaWlPaU9JWTZDYXI2NWhzZUxZNkZ3bWM3WkVrQU4xZzNtdlozWlFGY1BvbXI2clpRU3AzN0FoWUJQZGd4T0JZczk1a3dHOHRUZXRpRjZGd0RybmxRSjRvdHJkeEhfNUU1VTV4UEx1dUU5dlQxSGRFa1dwM09WMUtYUW9DdVlkODVxb2VoWGRDQWlYeVFXUUdsZGo4WTV1Njc0?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services empanelled by Oil India for seismic data - scanx.trade</div></a><div class="news-date">Sat, 06 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxPM3F3Y3JEbHNPZ2FJT2JPOHBHRHU0dmZTYVowRGljZzFkMHlYUDZsY29tcXV5c1hrS296OGVkZGJOYmFHUXc2MGxoVzFBMEs3cDh6SU5tcjM5Y1FLS3VkR0J6b2MtVUtDOUlPT2NCM0QxODZUM21peFJtU29VNUtRdTVpTkRTTk00QWJqRmxXeHJuS3U3TU1DYkpmREtoYW9kbVdGZ2hNZjl2dTQ1REJjTGozMDNLTmF2Tl9mSmwzbTZ6MEZtaGhhTUh2WkYzVEcy?oc=5" target="_blank" class="news-link"><div class="news-title">Ashish Kacholia Makes Fresh Entry In This Energy Stock; Share Price Jumps 8% on Thursday - Dalal Street Investment Journal</div></a><div class="news-date">Thu, 14 May 2026</div></div><div class="news-section-title">Industry News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMDBIbFUzOUNnTHUySzBMZ1AzTUlLaFZRUTFUc3FsNFo0engwMlgwZFJmcm5uaE5MQ00zdUJWX0QyYTM4TWNoR0hJVmh6bHhRcExLaTIyWDZwUUJtWEFVS2U0RjhyUW5Kc2FxazJfQ1dVNE1oTlpVWVJGdkRJemxETXlzOVVWZnlzUXA4NTBpWEZ3WGRPVUVIblpFMXNLN0RuOUNhTTQ3ZHJBcEZyQUhEcnJINVVXV0dNbzZzVFBVOG0yc1B0UmNjeFdnM2lIUVZERkE2LUZob2xjVm55SzhV0gHkAUFVX3lxTE5ZRDd1MGx2dnJzTVVWaDFqZVdNSGVpNWo4UU93VXExOG8zVENYZnlRcENKdGJMWlhKQ3h0U2t0Z2xqS1pVYkpYWWhWZVNBUHRfbGItZ1NTUUxsOUxvRkNTN2JNV2hRTWE0aUg3ZnJIb0Z2SHVlYzJ4am82aUZRdGNUQ1VrMUZzdUJOMllXZjNNdEYwcjdPOFZNaUFqYmFxSlNyMFlzREhOLVlzVGFuVzVMQkNNaGk4bkJ4aDRkTkE2cTZMNEllZGFacnc5YW41dFBuOFE2UUFvZmFmLWFZZHZLS3JEMA?oc=5" target="_blank" class="news-link"><div class="news-title">Concerns Surrounding Asian Energy Services' (NSE:ASIANENE) Performance - simplywall.st</div></a><div class="news-date">Wed, 27 May 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxOaTFfYTVWUG9oUmpUQVNEaW0yckdGUmRZYmc4eHpna3Q4SWllUk1BVjRHMTIwZ2NwR3E3emVxWVphMzFYWVFjOHNEbFBlWXllQjNyRktub0w4NWZPVGRYdldhdzlIMjRsUWJOdTQySVg1cFlJeFBuRE1UZFBCbFlZcUdPV3JUbk1palUweVFwWWIxSE5ZYWQtSjkzanFCQzA4UTEycGZBU1FMYkpaWXE1akVwSTdOY3pLMDRZWWdhLUtsamxBLVlaMXNZM1ZsTHM2NDh6NGJLUlJkVEZNU0Uw0gHkAUFVX3lxTE9FZnVOeFlyVUw1c0U3bGR6SGNDc0o1VmFUY0VMNXdCZmp6UkdPWkdOclZkRG9LVVRmN3puU0U4bEZYOVl4Y3FXQ1JGQjFsTTVwNG5aTFpHUnJHR0RTVVlnTGk2bXI1OWhSLVlHclpVbGh2bzlhbDBoaFcyb2N0Z3BOUnJCYUZXcld2bkl1TEtKSEtxSGVzWlJEcjNremdHUnpWbGM3aV9oSkVXa0ZSUDhmeEpMdmxFWWVlQXlPYkxITGtYTk11UFhULVhoQWUxTm5LaXJWZFdIQzk0RWNzNDFQNEdDQw?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services Limited's (NSE:ASIANENE) Business Is Yet to Catch Up With Its Share Price - simplywall.st</div></a><div class="news-date">Wed, 30 Jul 2025</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxQSV9id05kSlBsUDBqbVFCZXZMblVrQnZMaU05VVNsZFJDSGNyTXRGdGQwbUlCbnh4Z0tydGU5Z1JmUlFmSkdPS1lHTHpFZDRLTVdfRVVwcTJrWWdVRVNsYXRCSXVwSGFfZDcxRVZKU0NnYlpzel9yV3BxMHV4SmpWUk1SeS1FNmxNdjZvcmt5LUFYTEFhNWZVU0ljdENvdG1WeFZlbExnVmlJSk12aEdpenZuR1p3b1FNRW1yc19mZG5mYUk5S1pSQkhUQ3FNbTdPWTBfdXoyS29FUGYxXzkxYXhoTG1mMGd4b1lnZUhCX0Y3UHRraFRpRjhuOEVyb1VUYlpV?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services Says Oil India Empanels Asian Energy Services For 2D And 3D Seismic Data Services - TradingView</div></a><div class="news-date">Thu, 04 Jun 2026</div></div></div>
-<div class="tab-content" id="tab-1-fin" style="display:none"><div class="fin-section-title">Quarterly Sales (Last 8 Quarters)</div><div class="fin-bars"><div class="fin-bar-item"><div class="fin-bar" style="height:10.650887573964496px"></div><div class="fin-bar-val">60</div><div class="fin-bar-label">Jun 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:17.39644970414201px"></div><div class="fin-bar-val">98</div><div class="fin-bar-label">Sep 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:16.331360946745562px"></div><div class="fin-bar-val">92</div><div class="fin-bar-label">Dec 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:38.16568047337278px"></div><div class="fin-bar-val">215</div><div class="fin-bar-label">Mar 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:20.414201183431953px"></div><div class="fin-bar-val">115</div><div class="fin-bar-label">Jun 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:18.106508875739642px"></div><div class="fin-bar-val">102</div><div class="fin-bar-label">Sep 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:41.71597633136095px"></div><div class="fin-bar-val">235</div><div class="fin-bar-label">Dec 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:60.0px"></div><div class="fin-bar-val">338</div><div class="fin-bar-label">Mar 2026</div></div></div><div class="fin-section-title">Annual Financials (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Sales</td><td>305</td><td>465</td><td>791</td></tr><tr><td>Operating Profit</td><td>42</td><td>66</td><td>95</td></tr><tr><td>Net Profit (PAT)</td><td>26</td><td>42</td><td>52</td></tr><tr><td>Interest</td><td>2</td><td>4</td><td>11</td></tr></table><div class="fin-section-title">Balance Sheet (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Gross Block</td><td>112</td><td>115</td><td>115</td></tr><tr><td>Total Debt</td><td>22</td><td>24</td><td>159</td></tr></table><div class="fin-section-title">Working Capital Days</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Receivable Days</td><td>163</td><td>176</td><td>160</td></tr><tr><td>Payable Days</td><td></td><td></td><td></td></tr><tr><td>Inventory Days</td><td></td><td></td><td></td></tr></table><div class="fin-section-title">Key Ratios</div><div class="ratio-grid"><div class="ratio-item"><div class="ratio-label">Stock P/E</div><div class="ratio-val">31.0</div></div><div class="ratio-item"><div class="ratio-label">ROCE</div><div class="ratio-val">16.5
+<div class="tab-content" id="tab-1-news" style="display:none"><div class="news-section-title">Company News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOamtxejMwb3BoVjlQeVEzWVlYZWZrN1lJdURYVU1nUXoyTS1MNkZrNFlFZFhvblVYc0ZfUW1yZF9wR0dZQm44cjNfVlJXWDg4am5TdkJBcHB2czJITXRTaVo5b1o5VEtMLTNGVXN6U1lTMHdBMUdqUzZnLXB3MnhuSnZOUEg1cnFHU2k0cjdPcVMzdndLTmVsWi1FQmFIOGRxU000VEhQWE5kZW10RTZLU0ZsNjB5OGU5VW9iSXJJQXk?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services approves MD re-appointment via postal ballot - scanx.trade</div></a><div class="news-date">Fri, 26 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMDBIbFUzOUNnTHUySzBMZ1AzTUlLaFZRUTFUc3FsNFo0engwMlgwZFJmcm5uaE5MQ00zdUJWX0QyYTM4TWNoR0hJVmh6bHhRcExLaTIyWDZwUUJtWEFVS2U0RjhyUW5Kc2FxazJfQ1dVNE1oTlpVWVJGdkRJemxETXlzOVVWZnlzUXA4NTBpWEZ3WGRPVUVIblpFMXNLN0RuOUNhTTQ3ZHJBcEZyQUhEcnJINVVXV0dNbzZzVFBVOG0yc1B0UmNjeFdnM2lIUVZERkE2LUZob2xjVm55SzhV0gHkAUFVX3lxTE5ZRDd1MGx2dnJzTVVWaDFqZVdNSGVpNWo4UU93VXExOG8zVENYZnlRcENKdGJMWlhKQ3h0U2t0Z2xqS1pVYkpYWWhWZVNBUHRfbGItZ1NTUUxsOUxvRkNTN2JNV2hRTWE0aUg3ZnJIb0Z2SHVlYzJ4am82aUZRdGNUQ1VrMUZzdUJOMllXZjNNdEYwcjdPOFZNaUFqYmFxSlNyMFlzREhOLVlzVGFuVzVMQkNNaGk4bkJ4aDRkTkE2cTZMNEllZGFacnc5YW41dFBuOFE2UUFvZmFmLWFZZHZLS3JEMA?oc=5" target="_blank" class="news-link"><div class="news-title">Concerns Surrounding Asian Energy Services' (NSE:ASIANENE) Performance - simplywall.st</div></a><div class="news-date">Wed, 27 May 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbk1yNnBHU21leXhkMkZFb2ZtTGlxTl9NNWxiaWlPaU9JWTZDYXI2NWhzZUxZNkZ3bWM3WkVrQU4xZzNtdlozWlFGY1BvbXI2clpRU3AzN0FoWUJQZGd4T0JZczk1a3dHOHRUZXRpRjZGd0RybmxRSjRvdHJkeEhfNUU1VTV4UEx1dUU5dlQxSGRFa1dwM09WMUtYUW9DdVlkODVxb2VoWGRDQWlYeVFXUUdsZGo4WTV1Njc0?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services empanelled by Oil India for seismic data - scanx.trade</div></a><div class="news-date">Sat, 06 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOSHFFUGFRMlh6emlPV3RycngyclZoVFZTVzFHYkJlVUtrR21ZbzFVcjl3RzE4Nm4tWEVLRTZtT3A2U0Q1M3h3OG9IVUxMRTIxQzl5a2RXODJvU3phUmJoNTlzWGZXT3NPaTg1d3NoSFlpdHhkXzhnMlJSaEs2dTI3bVJtZ285Wm5mTXQ2N2RjYS1wSnphLW9teU9YeXdQQ2I2V2dtSHp1Z9IBrgFBVV95cUxQM3dDekdtSE4tTUs3TVdlUG9uNFM3LWQ5cXBfMjBpSVNaTUFKdjlXUUNOUVY0SllKTUlSY2ltTGx1ZVZrWlpHU1NjUERBT2dHZUY0RHRlaHlSTFk3T09MVHZqYWZXaGdOQnVsZjRXWThZTlBFYS1mN1FpeTNNV2VmRlY1ZE5kR2kzTlJRYkNYcG5ITDZmaGNxNWtUbkpIYTNpVlpGSFhHV0szQTBhR1E?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services aims Rs. 3,000 crore revenue by 2029 - Indian Chemical News</div></a><div class="news-date">Mon, 29 Sep 2025</div></div><div class="news-section-title">Industry News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxOaTFfYTVWUG9oUmpUQVNEaW0yckdGUmRZYmc4eHpna3Q4SWllUk1BVjRHMTIwZ2NwR3E3emVxWVphMzFYWVFjOHNEbFBlWXllQjNyRktub0w4NWZPVGRYdldhdzlIMjRsUWJOdTQySVg1cFlJeFBuRE1UZFBCbFlZcUdPV3JUbk1palUweVFwWWIxSE5ZYWQtSjkzanFCQzA4UTEycGZBU1FMYkpaWXE1akVwSTdOY3pLMDRZWWdhLUtsamxBLVlaMXNZM1ZsTHM2NDh6NGJLUlJkVEZNU0Uw0gHkAUFVX3lxTE9FZnVOeFlyVUw1c0U3bGR6SGNDc0o1VmFUY0VMNXdCZmp6UkdPWkdOclZkRG9LVVRmN3puU0U4bEZYOVl4Y3FXQ1JGQjFsTTVwNG5aTFpHUnJHR0RTVVlnTGk2bXI1OWhSLVlHclpVbGh2bzlhbDBoaFcyb2N0Z3BOUnJCYUZXcld2bkl1TEtKSEtxSGVzWlJEcjNremdHUnpWbGM3aV9oSkVXa0ZSUDhmeEpMdmxFWWVlQXlPYkxITGtYTk11UFhULVhoQWUxTm5LaXJWZFdIQzk0RWNzNDFQNEdDQw?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services Limited's (NSE:ASIANENE) Business Is Yet to Catch Up With Its Share Price - simplywall.st</div></a><div class="news-date">Wed, 30 Jul 2025</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxQSV9id05kSlBsUDBqbVFCZXZMblVrQnZMaU05VVNsZFJDSGNyTXRGdGQwbUlCbnh4Z0tydGU5Z1JmUlFmSkdPS1lHTHpFZDRLTVdfRVVwcTJrWWdVRVNsYXRCSXVwSGFfZDcxRVZKU0NnYlpzel9yV3BxMHV4SmpWUk1SeS1FNmxNdjZvcmt5LUFYTEFhNWZVU0ljdENvdG1WeFZlbExnVmlJSk12aEdpenZuR1p3b1FNRW1yc19mZG5mYUk5S1pSQkhUQ3FNbTdPWTBfdXoyS29FUGYxXzkxYXhoTG1mMGd4b1lnZUhCX0Y3UHRraFRpRjhuOEVyb1VUYlpV?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services Says Oil India Empanels Asian Energy Services For 2D And 3D Seismic Data Services - TradingView</div></a><div class="news-date">Thu, 04 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNR3Y3SVp6U1RONmRldEVicHRyaHMxRkRNRTl3azdsQ2UxaVYwSUR3WE9takNIZnBMV2FNa0M5cGFnVklkbDJkQ1JybGtGRS1yOXQtSF8zX3V3dGVNeW03TW8xMUZjUGM4b0ZqamNoSk1NU1Bva09yUnRyUEhabHh2OUlWeDlnb1k?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Wins ₹865 Cr Vedanta Contract; Stock Jumps 13.6% - HDFC Sky</div></a><div class="news-date">Mon, 28 Jul 2025</div></div></div>
+<div class="tab-content" id="tab-1-fin" style="display:none"><div class="fin-section-title">Quarterly Sales (Last 8 Quarters)</div><div class="fin-bars"><div class="fin-bar-item"><div class="fin-bar" style="height:10.650887573964496px"></div><div class="fin-bar-val">60</div><div class="fin-bar-label">Jun 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:17.39644970414201px"></div><div class="fin-bar-val">98</div><div class="fin-bar-label">Sep 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:16.331360946745562px"></div><div class="fin-bar-val">92</div><div class="fin-bar-label">Dec 2024</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:38.16568047337278px"></div><div class="fin-bar-val">215</div><div class="fin-bar-label">Mar 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:20.414201183431953px"></div><div class="fin-bar-val">115</div><div class="fin-bar-label">Jun 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:18.106508875739642px"></div><div class="fin-bar-val">102</div><div class="fin-bar-label">Sep 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:41.71597633136095px"></div><div class="fin-bar-val">235</div><div class="fin-bar-label">Dec 2025</div></div><div class="fin-bar-item"><div class="fin-bar" style="height:60.0px"></div><div class="fin-bar-val">338</div><div class="fin-bar-label">Mar 2026</div></div></div><div class="fin-section-title">Annual Financials (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Sales</td><td>305</td><td>465</td><td>791</td></tr><tr><td>Operating Profit</td><td>42</td><td>66</td><td>95</td></tr><tr><td>Net Profit (PAT)</td><td>26</td><td>42</td><td>52</td></tr><tr><td>Interest</td><td>2</td><td>4</td><td>11</td></tr></table><div class="fin-section-title">Balance Sheet (Last 3 Years)</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Gross Block</td><td>112</td><td>115</td><td>115</td></tr><tr><td>Total Debt</td><td>22</td><td>24</td><td>159</td></tr></table><div class="fin-section-title">Working Capital Days</div><table class="fin-table"><tr><th>Metric</th><th>Mar 2024</th><th>Mar 2025</th><th>Mar 2026</th></tr><tr><td>Receivable Days</td><td>163</td><td>176</td><td>160</td></tr><tr><td>Payable Days</td><td></td><td></td><td></td></tr><tr><td>Inventory Days</td><td></td><td></td><td></td></tr></table><div class="fin-section-title">Key Ratios</div><div class="ratio-grid"><div class="ratio-item"><div class="ratio-label">Stock P/E</div><div class="ratio-val">30.8</div></div><div class="ratio-item"><div class="ratio-label">ROCE</div><div class="ratio-val">16.5
         
           %</div></div><div class="ratio-item"><div class="ratio-label">ROE</div><div class="ratio-val">12.9
         
