@@ -1,0 +1,222 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Market Close Report - Sunday, 05 July 2026</title><style>*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+body{background:#0b0f1a;color:#e2e8f0;padding:16px}
+.rh{text-align:center;padding:14px 0 10px;border-bottom:1px solid #1e2433;margin-bottom:16px}
+.rt{font-size:18px;font-weight:800;color:#f8fafc}
+.rs{font-size:11px;color:#475569;margin-top:4px}
+.market-strip,.cap-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px}
+.idx,.cs-item{background:#111827;border:1px solid #1e293b;border-radius:8px;padding:8px 10px;text-align:center}
+.idx-name,.cs-label{font-size:9px;color:#475569;text-transform:uppercase;letter-spacing:.5px}
+.idx-val,.cs-val{font-size:14px;font-weight:700;color:#f8fafc;margin:2px 0}
+.idx-chg,.cs-sub{font-size:10px;font-weight:600}
+.stock-selector{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.stock-pill{flex-shrink:0;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid #1e293b;background:#111827;color:#94a3b8}
+.stock-pill.active{background:#2563eb;border-color:#2563eb;color:#fff}
+.pill-chg{font-size:10px;margin-left:4px}
+.stock-card{background:#111827;border:1px solid #1e293b;border-radius:12px;overflow:hidden;margin-bottom:16px;max-width:680px;margin-left:auto;margin-right:auto}
+.stock-card-header{padding:14px 16px;border-bottom:1px solid #1e2433}
+.sch-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.sch-name{font-size:15px;font-weight:700;color:#f1f5f9}
+.sch-sym{font-size:10px;color:#475569;margin-top:2px;text-transform:uppercase}
+.sch-price{font-size:24px;font-weight:800;color:#f8fafc;text-align:right}
+.sch-chg{font-size:13px;font-weight:600;text-align:right;margin-top:2px}
+.sch-sl-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.sch-sl{flex:1;min-width:100px;background:#0f172a;border-radius:6px;padding:7px 10px}
+.sch-sl-label{font-size:9px;color:#475569;text-transform:uppercase;margin-bottom:2px}
+.sch-sl-val{font-size:13px;font-weight:700}
+.tab-bar{display:flex;border-bottom:1px solid #1e2433;overflow-x:auto}
+.tab{flex:1;min-width:auto;padding:10px 12px;text-align:center;font-size:11px;font-weight:600;color:#475569;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.tab.active{color:#60a5fa;border-color:#60a5fa}
+.tab-content{padding:14px 16px}
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.metric{background:#0f172a;border-radius:6px;padding:8px 10px}
+.metric-label{font-size:9px;color:#475569;text-transform:uppercase;margin-bottom:3px}
+.metric-val{font-size:13px;font-weight:700;color:#cbd5e1}
+.range-section{margin-bottom:12px}
+.range-label{display:flex;justify-content:space-between;font-size:10px;color:#475569;margin-bottom:5px}
+.range-track{height:6px;background:#1e2a3a;border-radius:3px;position:relative}
+.range-fill{height:100%;border-radius:3px}
+.range-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:12px;height:12px;border:2px solid #0b0f1a;border-radius:50%}
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.tech-item{background:#0f172a;border-radius:6px;padding:8px 10px;text-align:center}
+.tech-label{font-size:9px;color:#475569;text-transform:uppercase;margin-bottom:4px}
+.tech-val{font-size:14px;font-weight:800}
+.tech-sub{font-size:9px;color:#475569;margin-top:2px}
+.pivot-row{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:12px}
+.pv{text-align:center;padding:6px 4px;border-radius:5px}
+.pv.res{background:#1a0a0a}.pv.pp{background:#0f172a;border:1px solid #334155}.pv.sup{background:#0a1a0a}
+.pv-label{font-size:8px;color:#475569;text-transform:uppercase;margin-bottom:2px}
+.pv-val{font-size:10px;font-weight:700}
+.ma-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.ma-badge{font-size:11px;font-weight:600;padding:4px 10px;border-radius:16px}
+.badge-up{color:#34d399;border:1px solid #34d399;background:#052e16}
+.badge-dn{color:#f87171;border:1px solid #f87171;background:#450a0a}
+.news-section-title,.fin-section-title{font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.6px;margin:14px 0 8px;padding-bottom:4px;border-bottom:1px solid #1e2433}
+.news-item{padding:8px 0;border-bottom:1px solid #1e2433}
+.news-item:last-child{border:none}
+.news-title{font-size:12px;color:#cbd5e1;line-height:1.4;margin-bottom:3px}
+.news-link{text-decoration:none;color:inherit}
+.news-link:hover .news-title{color:#60a5fa}
+.news-date{font-size:10px;color:#475569}
+.fin-table{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:8px}
+.fin-table th{text-align:left;color:#475569;font-size:9px;text-transform:uppercase;padding:5px 6px;border-bottom:1px solid #1e2433}
+.fin-table td{padding:6px 6px;border-bottom:1px solid #0f172a;color:#94a3b8}
+.fin-table .self{color:#f1f5f9;font-weight:700;background:#0f172a}
+.fin-bars{display:flex;gap:4px;align-items:flex-end;height:90px;margin-bottom:14px;padding:8px 0}
+.fin-bar-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.fin-bar{width:100%;background:linear-gradient(180deg,#3b82f6,#1d4ed8);border-radius:3px 3px 0 0;min-height:4px}
+.fin-bar-val{font-size:9px;font-weight:600;color:#cbd5e1}
+.fin-bar-label{font-size:8px;color:#475569;writing-mode:vertical-rl;text-orientation:mixed}
+.ratio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.ratio-item{background:#0f172a;border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between}
+.ratio-label{font-size:11px;color:#94a3b8}
+.ratio-val{font-size:11px;font-weight:700;color:#f1f5f9}
+.tv-btn{display:block;background:#2563eb;color:#fff;font-size:12px;font-weight:600;padding:10px 18px;border-radius:6px;text-decoration:none;text-align:center;margin-top:8px}
+.up{color:#34d399}.dn{color:#f87171}.neutral{color:#94a3b8}.warn{color:#fb923c}
+.footer{text-align:center;font-size:11px;color:#334155;margin-top:20px;padding-top:14px;border-top:1px solid #1e2433;max-width:680px;margin-left:auto;margin-right:auto}
+@media(max-width:480px){.market-strip,.cap-strip{grid-template-columns:repeat(2,1fr)}.metric-grid,.tech-grid{grid-template-columns:repeat(2,1fr)}.pivot-row{grid-template-columns:repeat(4,1fr)}.sch-top{flex-direction:column}.sch-price{text-align:left}.sch-chg{text-align:left}}</style></head><body>
+<div class="rh"><div class="rt">Market Close Report</div><div class="rs">Sunday, 05 July 2026 · 04:39 PM IST</div></div>
+<div class="market-strip"><div class="idx">
+<div class="idx-name">Nifty 50</div>
+<div class="idx-val">24,271</div>
+<div class="idx-chg up">▲ +0.39%</div>
+</div><div class="idx">
+<div class="idx-name">Bank Nifty</div>
+<div class="idx-val">57,938</div>
+<div class="idx-chg dn">▼ -0.16%</div>
+</div><div class="idx">
+<div class="idx-name">Sensex</div>
+<div class="idx-val">77,764</div>
+<div class="idx-chg up">▲ +0.34%</div>
+</div><div class="idx">
+<div class="idx-name">USD/INR</div>
+<div class="idx-val">95</div>
+<div class="idx-chg dn">▼ -0.19%</div>
+</div></div>
+<div class="cap-strip">
+<div class="cs-item"><div class="cs-label">Own Capital</div><div class="cs-val">Rs2.0 L</div><div class="cs-sub neutral">3x MTF</div></div>
+<div class="cs-item"><div class="cs-label">Buying Power</div><div class="cs-val">Rs6.0 L</div><div class="cs-sub neutral">Available</div></div>
+<div class="cs-item"><div class="cs-label">Deployed</div><div class="cs-val">Rs6.4 L</div><div class="cs-sub warn">106% used</div></div>
+<div class="cs-item"><div class="cs-label">Daily Interest</div><div class="cs-val warn">Rs170</div><div class="cs-sub neutral">On margin</div></div>
+</div>
+<div class="cap-strip">
+<div class="cs-item"><div class="cs-label">Invested</div><div class="cs-val">Rs3.1 L</div><div class="cs-sub neutral">2 stocks</div></div>
+<div class="cs-item"><div class="cs-label">Current</div><div class="cs-val">Rs3.1 L</div><div class="cs-sub up">5,830 +</div></div>
+<div class="cs-item"><div class="cs-label">P&L</div><div class="cs-val up">+1.90%</div><div class="cs-sub neutral">Unrealized</div></div>
+<div class="cs-item"><div class="cs-label">Today</div><div class="cs-val up">2,925</div><div class="cs-sub neutral">Day move</div></div>
+</div>
+<div class="stock-selector"><div class="stock-pill active" onclick="showStock(0,this)">CHAMBLFERT <span class="pill-chg up">+0.9%</span></div><div class="stock-pill " onclick="showStock(1,this)">ASIANENE <span class="pill-chg dn">-4.2%</span></div></div>
+<div class="stock-card" id="card-0" style="display:block">
+<div class="stock-card-header">
+  <div class="sch-top">
+    <div><div class="sch-name">Chambal Fertilisers and Chemicals Limited</div><div class="sch-sym">CHAMBLFERT · NSE</div></div>
+    <div><div class="sch-price">Rs 481.55</div><div class="sch-chg up">▲ +4.50 (+0.94%)</div></div>
+  </div>
+  <div class="sch-sl-row"><div class="sch-sl"><div class="sch-sl-label">Stop Loss</div><div class="sch-sl-val warn">Rs 474 (+1.6%)</div></div><div class="sch-sl"><div class="sch-sl-label">Target</div><div class="sch-sl-val up">Rs 510 (+5.9%)</div></div><div class="sch-sl"><div class="sch-sl-label">Breakeven</div><div class="sch-sl-val">Rs 473 (+0.2%)</div></div></div>
+</div>
+<div class="tab-bar">
+  <div class="tab active" onclick="showTab(0,'price',this)">Price</div>
+  <div class="tab" onclick="showTab(0,'tech',this)">Technicals</div>
+  <div class="tab" onclick="showTab(0,'news',this)">News</div>
+  <div class="tab" onclick="showTab(0,'fin',this)">Financials</div>
+  <div class="tab" onclick="showTab(0,'peers',this)">Peers</div>
+</div>
+<div class="tab-content" id="tab-0-price">
+  <div class="metric-grid">
+    <div class="metric"><div class="metric-label">Day High</div><div class="metric-val">Rs482.70</div></div>
+    <div class="metric"><div class="metric-label">Day Low</div><div class="metric-val">Rs474.00</div></div>
+    <div class="metric"><div class="metric-label">Prev Close</div><div class="metric-val">Rs477.05</div></div>
+    <div class="metric"><div class="metric-label">Volume</div><div class="metric-val">6.91 L</div></div>
+    <div class="metric"><div class="metric-label">Vol Ratio</div><div class="metric-val">0.7x</div></div>
+    <div class="metric"><div class="metric-label">Mkt Cap</div><div class="metric-val">Rs192.9k Cr</div></div>
+  </div>
+  <div class="range-section">
+    <div class="range-label"><span>52W Low: Rs400</span><span>52W Range</span><span>52W High: Rs581</span></div>
+    <div class="range-track"><div class="range-fill" style="width:45.2%;background:linear-gradient(90deg,#1d4ed8,#3b82f6)"></div><div class="range-dot" style="left:45.2%;background:#60a5fa"></div></div>
+  </div>
+  <a class="tv-btn" href="https://www.tradingview.com/chart/?symbol=NSE:CHAMBLFERT" target="_blank">Open TradingView Chart</a>
+</div>
+<div class="tab-content" id="tab-0-tech" style="display:none">
+  <div class="tech-grid">
+    <div class="tech-item"><div class="tech-label">RSI (14)</div><div class="tech-val neutral">56.6</div><div class="tech-sub">Neutral</div></div>
+    <div class="tech-item"><div class="tech-label">Support</div><div class="tech-val up">Rs445</div><div class="tech-sub">20D low</div></div>
+    <div class="tech-item"><div class="tech-label">Resistance</div><div class="tech-val dn">Rs498</div><div class="tech-sub">20D high</div></div>
+  </div>
+  <div class="ma-badges">
+    <span class="ma-badge badge-up">50 DMA: Rs462 (above)</span>
+    <span class="ma-badge badge-dn">200 DMA: N/A</span>
+  </div>
+  <div class="news-section-title">Pivot Points</div>
+  <div class="pivot-row"><div class="pv res"><div class="pv-label">R3</div><div class="pv-val dn">488</div></div><div class="pv res"><div class="pv-label">R2</div><div class="pv-val dn">483</div></div><div class="pv res"><div class="pv-label">R1</div><div class="pv-val dn">480</div></div><div class="pv pp"><div class="pv-label">PP</div><div class="pv-val neutral">476</div></div><div class="pv sup"><div class="pv-label">S1</div><div class="pv-val up">473</div></div><div class="pv sup"><div class="pv-label">S2</div><div class="pv-val up">468</div></div><div class="pv sup"><div class="pv-label">S3</div><div class="pv-val up">465</div></div></div>
+</div>
+<div class="tab-content" id="tab-0-news" style="display:none"><div class="news-section-title">Company News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQVDl0bGE4YjY2Skk1ZjZvbGFoVUhWaXBMcGM5NVVqMkk2SmVGWEMtNk9pbWJEaE1IdEhmQTBGU0NQVkI2SGVOWmdldlBZd3A1amcwMzJ6N1l3SjBvNHhoZGJpbE5sejh1M05tQktYUGtlTTBYVllXVzZPSHBUTTBPeVdaOFVYWG12REdEbEZJczJNYkxYVGUzdUNiN3JVUmd6aEhmaFdQU2dIbXFVaVlKS2hQWQ?oc=5" target="_blank" class="news-link"><div class="news-title">CM Airtime confirms no encumbrance on Chambal Fertilisers shares in FY26 - scanx.trade</div></a><div class="news-date">Wed, 01 Jul 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQM0twWkpvUGFTVHg0MGt6b3JGWnJOVkZlbHEyUnVSY1I5NHotY0wxQVpXWmN2Wi1wT2I1VXlVR1ZaMFJ0LXJhYjl3NUZBQzVCSC1HXzFaVWIwRnJVNzloTm14TXU1Rm5zZ2tnZzVLZUVIZzFyLXc2d0VOemwtZ1ZqVVgybElsQ2RxaUgwMVZwNXlQQXNwRHVVSGFseGdGZHhFM1hrVUdSenRkS1NtX1lrbDEyY0h1THRRdENGSVNxc0hFQXZwLVU2NVFudUUtbGlCRnlKckdLdGk2U1ZIeW1BS2ZYUFNsam5D0gHwAUFVX3lxTE5jQW1yYXgxaU1xNDIxcDVvYkRacFRoS2VaV3piMHhMR0p1QUlGb2U5bTUxR2JuRFY4R0h0REZqQnh5WVk5aVg5OTZYYTNHck1TYnRvdHVkbWNmYW9tZE5sZDVMLXZOMnRiVVNwUGdrb0pPbHZaaUVQZjYxVzJqcVN4cHpCZ2xqUlZ6UGhaU2VFcUVvOWcyRl92Q29sZEFGZERBZzlJemhIQXlMZVJFUlR4VFJTekUxY0RFTGFoNlVicnEteTQ3dE1wRVVMSmFIaWdBSXVfcC0xV0Z1eXhzS2ZuR0VJY3lYaW5yS1dkR183LQ?oc=5" target="_blank" class="news-link"><div class="news-title">Fertiliser Stocks Rally As 12 Supply Vessels Resume Journey To India After Being Stranded At Strait Of Hormuz - NDTV Profit</div></a><div class="news-date">Mon, 22 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxOWThaNm9xY2EyMWVGRTlxWmlDSHd1cGZBWFpvcS1tanNXU2YyU2dYWnZaZko4cEo4S0g0YkthVVFUcjNGOXlnM3JWU3RTX05MVHFhWU1QT0lBVHpoV0tmSnNwUGZ3U2lVNDRBd2dobmNYRXljVGpleEFFVG51ZE9lVTVrNzBBQVU0ZFdoYzh6RUlQQTlGdnlqRTFGQTY1anFzRGJMRXlsWnlGTXZocThpUWpfUUhjclZ5R3lHZzQzcVU3Vkw3OFVWYWd5QmMtZDE4LTNuT1NNUlNucS04eXh6SjlPb090MFVsVkZSZll2bUNfN2pWQmFyZ29uMmHSAYICQVVfeXFMTmxJVVJyblJEUmpmN21TRzd2NURrQTBKOUtxVFkyNS1SUzR4YmxrOEYwV0k1aUFkMEZHa25RVVhZci1jRklJQlNqcFN1aTA1R0xETFhkSXg3R1ZPa1pWWUlCc1hyMGNUbnJMZnhpTWtQTmx6QTZGSVRUUFJzM3RhbjZtR2pxeEY2dzIwX2dMUnh0OHFHRHhEelNTTWVRRUc4N2ZGMDIxTTU2anhzZGJlWU1QbHJNREgxS0xSV3NLQTlBMkVkMkpaUXlVT3pUMTdBT1Jia1ZmbUdUbkgtNHZvWEY2YnZYTl9HZ2hHTXpmdGlELTFBUGtzbTJMU0NEaS1uMWNR?oc=5" target="_blank" class="news-link"><div class="news-title">Declining Stock and Decent Financials: Is The Market Wrong About Chambal Fertilisers and Chemicals Limited (NSE:CHAMBLFERT)? - simplywall.st</div></a><div class="news-date">Thu, 27 Nov 2025</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSVFtdjJaNVBSS1dHZlBaQy1qNno0RmRmWElMZGxKMk8zTUduSGdaT2NOQUxWVjBNbUFFR0x4SnhWRi1LbTNqdjFJOW1JVldvVl9mWmY3cDJmMHotRDlNSlZhUlBBOVVzZzdMUkU5akpBdE9ubV9LRzBVMFRIcnI2MTNnak9YSWtHaHlOLUF6NFhPWDNad2lJTmVPa3ZhSFpQUUtyaEFaSXZfZzdoeHpIdEh3MEd5QTR0X0VOTnpaVk9IR3l4R01rZjNwdDNSWERBMUE?oc=5" target="_blank" class="news-link"><div class="news-title">Premium Exchange confirms no encumbrance on Chambal Fertilisers shares in FY26 - scanx.trade</div></a><div class="news-date">Fri, 19 Jun 2026</div></div><div class="news-section-title">Industry News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNTm9PbEJlRGNVMDBFalREYkcwb2l2TlJzekZpU000N1RJVXZZYkh1aFlPcExYNE5DekZ4NlhxZmxHMVI1cDBiV1ZiRFVJRmhXMXZiS0tHSDNIR3A2YmlJbzdLbXQxY3JncWVIR1B1cjFWWlBLalNJcl96V1lfZ2xvRHM0b2lfaDRMM3ZhZzcxU1NtV1pNdGZMaGdjeUNHQdIBpgFBVV95cUxQMHV4WGpRbjBNVk9BbVN0dWNHYXFUdlJ1RjdBc0RiRDRmUU04ay1RblE0YzY3YWdxTHV6R2NCNDZaMlpPT1gtcWxXTUl4dGVNRFRwRGRKY3JhYnB3bk1zVVphZWU1b0lqTk5Jc2lfT1pHMkxUNVBFOURXX1doZkVoTnZqTHVKMVFmVURFYUFUWTRHLVRhaFVveGM2RUk3MkZ5by1ZZ3hn?oc=5" target="_blank" class="news-link"><div class="news-title">Why Iran War May Push India To Double Fertiliser Subsidy - NDTV</div></a><div class="news-date">Thu, 11 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNRzIwaHNidlBrNHdueE1ndWtSbWhSUjczUXhkWTc4SHNNZXhoYk9EUDNpc3JUcGIza2ZSa2hjVDAyQW5RMG1JV2FFT0pLV20zX3czOGI4OXJPNnY1RHZUcEk0U2pjWHhxamtmS0ZDbktFUXNZS3FCTlNkSGYxaXN4WV84SzRZWTh1X3BQb2Z5NkpNRm4wSlNFZ0hFbmxZajBsQy1hTjRYVWs1V19COU93NkxR?oc=5" target="_blank" class="news-link"><div class="news-title">Indian fertilizer, specialty chemical industries hit by US-Iran war - Chemical & Engineering News</div></a><div class="news-date">Fri, 20 Mar 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPeVhnaGdEdmNmcTY1b29JNWRlbThLOFBrdEx0SVFvdUZpendMbHVjZHcybWNOMXZQUzFPX3hwR0QyTkZGOVdGemJyQ0dvX3A1RTdpVjJkeVgxajFyT0ZOcnNxbzNQVlNYRmFsOXhqM0NkeHZVcTd3RjA2RTBIM3kwOFhfM2hvcnZTWExRZ1dFbTJqeEZZbVJEVk5XR1U?oc=5" target="_blank" class="news-link"><div class="news-title">India’s fertiliser security remains strong, stable, and well-managed: Govt - News On AIR</div></a><div class="news-date">Fri, 24 Apr 2026</div></div></div>
+<div class="tab-content" id="tab-0-fin" style="display:none"><div class="news-item">Financial data not available. Try /financials SYMBOL command.</div></div>
+<div class="tab-content" id="tab-0-peers" style="display:none"><div class="news-item">No peer data available</div></div>
+</div><div class="stock-card" id="card-1" style="display:none">
+<div class="stock-card-header">
+  <div class="sch-top">
+    <div><div class="sch-name">Asian Energy Services Limited</div><div class="sch-sym">ASIANENE · NSE</div></div>
+    <div><div class="sch-price">Rs 332.50</div><div class="sch-chg dn">▼ -14.55 (-4.19%)</div></div>
+  </div>
+  <div class="sch-sl-row"><div class="sch-sl"><div class="sch-sl-label">Stop Loss</div><div class="sch-sl-val warn">Rs 364 (-8.7%)</div></div><div class="sch-sl"><div class="sch-sl-label">Target</div><div class="sch-sl-val up">Rs 386 (+16.1%)</div></div></div>
+</div>
+<div class="tab-bar">
+  <div class="tab active" onclick="showTab(1,'price',this)">Price</div>
+  <div class="tab" onclick="showTab(1,'tech',this)">Technicals</div>
+  <div class="tab" onclick="showTab(1,'news',this)">News</div>
+  <div class="tab" onclick="showTab(1,'fin',this)">Financials</div>
+  <div class="tab" onclick="showTab(1,'peers',this)">Peers</div>
+</div>
+<div class="tab-content" id="tab-1-price">
+  <div class="metric-grid">
+    <div class="metric"><div class="metric-label">Day High</div><div class="metric-val">Rs351.65</div></div>
+    <div class="metric"><div class="metric-label">Day Low</div><div class="metric-val">Rs330.50</div></div>
+    <div class="metric"><div class="metric-label">Prev Close</div><div class="metric-val">Rs347.05</div></div>
+    <div class="metric"><div class="metric-label">Volume</div><div class="metric-val">2.75 L</div></div>
+    <div class="metric"><div class="metric-label">Vol Ratio</div><div class="metric-val">0.0x</div></div>
+    <div class="metric"><div class="metric-label">Mkt Cap</div><div class="metric-val">Rs16.2k Cr</div></div>
+  </div>
+  <div class="range-section">
+    <div class="range-label"><span>52W Low: Rs230</span><span>52W Range</span><span>52W High: Rs392</span></div>
+    <div class="range-track"><div class="range-fill" style="width:63.3%;background:linear-gradient(90deg,#1d4ed8,#3b82f6)"></div><div class="range-dot" style="left:63.3%;background:#60a5fa"></div></div>
+  </div>
+  <a class="tv-btn" href="https://www.tradingview.com/chart/?symbol=NSE:ASIANENE" target="_blank">Open TradingView Chart</a>
+</div>
+<div class="tab-content" id="tab-1-tech" style="display:none">
+  <div class="tech-grid">
+    <div class="tech-item"><div class="tech-label">RSI (14)</div><div class="tech-val neutral">N/A</div><div class="tech-sub">Neutral</div></div>
+    <div class="tech-item"><div class="tech-label">Support</div><div class="tech-val up">Rsnan</div><div class="tech-sub">20D low</div></div>
+    <div class="tech-item"><div class="tech-label">Resistance</div><div class="tech-val dn">Rsnan</div><div class="tech-sub">20D high</div></div>
+  </div>
+  <div class="ma-badges">
+    <span class="ma-badge badge-dn">50 DMA: RsN/A (below)</span>
+    <span class="ma-badge badge-dn">200 DMA: N/A</span>
+  </div>
+  <div class="news-section-title">Pivot Points</div>
+  <div class="pivot-row"></div>
+</div>
+<div class="tab-content" id="tab-1-news" style="display:none"><div class="news-section-title">Company News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxQbkZIUjYxX0NpejhVQXo4XzZwenNwYjA4ZGp3OWpWYVZScEoxWGI5TjctNVVDN0dhQkFRM2dkaGRQM3RjTnNqcTRaV2lYLXpGT005b09vTk90a0tVX2s2cDBXdHdmaGJvVmVtQXRjeHBidmstUkI3YU9hMEFTWkd1aWxGQlhLY2VLR21BUlZwaUZMN05DNXIyYjZiOGZyVThJQnU1dmhzM1N2N1B0XzBKcUlETW12S0dORlgyc21DVFJiTnJWbll5NVZvVGlsUUtmWjBBU0tTdnpTa3QxNkxCV3liUkdmYlVfVE5xSDNtWmdhRHk1cWtkRjAyTdIBgAJBVV95cUxQMXNyY1hVTFJyUXNkMzdYRzJPYUh0ZENnUHp4QnZMMHh3TGF0NlhFcHJLS29PQXBNbVRRSE14SWVldlFXZW5yUno5TUJfRUxLMXh1SnVSdVVfSG1MbHk3ejNXNFZDRFo4UkpyQVJTcDZEWEVUb2ZGRHlVMUF2Ul8za3poLTFCQml3ck1IODZsRUVydnFXbDgyTjRIOEVqT2tRakJJVF9GZXF5U3E1S0xvVTh6akRxWUZ3ZlNzallaUENqTWFsWWF5ZVV2aUlIeTB3ZDJhQ1E2ZUJGTWhIbUZGektFWlFLUURhWFZxdGRQalpIUXBKWXJ3dlJZTldXS3dM?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services gains up to 5% after firm expands beyond Coal India, secures Rs 188-crore contract - Moneycontrol.com</div></a><div class="news-date">Mon, 22 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbk1yNnBHU21leXhkMkZFb2ZtTGlxTl9NNWxiaWlPaU9JWTZDYXI2NWhzZUxZNkZ3bWM3WkVrQU4xZzNtdlozWlFGY1BvbXI2clpRU3AzN0FoWUJQZGd4T0JZczk1a3dHOHRUZXRpRjZGd0RybmxRSjRvdHJkeEhfNUU1VTV4UEx1dUU5dlQxSGRFa1dwM09WMUtYUW9DdVlkODVxb2VoWGRDQWlYeVFXUUdsZGo4WTV1Njc0?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services empanelled by Oil India for seismic data - scanx.trade</div></a><div class="news-date">Sat, 06 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMDBIbFUzOUNnTHUySzBMZ1AzTUlLaFZRUTFUc3FsNFo0engwMlgwZFJmcm5uaE5MQ00zdUJWX0QyYTM4TWNoR0hJVmh6bHhRcExLaTIyWDZwUUJtWEFVS2U0RjhyUW5Kc2FxazJfQ1dVNE1oTlpVWVJGdkRJemxETXlzOVVWZnlzUXA4NTBpWEZ3WGRPVUVIblpFMXNLN0RuOUNhTTQ3ZHJBcEZyQUhEcnJINVVXV0dNbzZzVFBVOG0yc1B0UmNjeFdnM2lIUVZERkE2LUZob2xjVm55SzhV0gHkAUFVX3lxTE5ZRDd1MGx2dnJzTVVWaDFqZVdNSGVpNWo4UU93VXExOG8zVENYZnlRcENKdGJMWlhKQ3h0U2t0Z2xqS1pVYkpYWWhWZVNBUHRfbGItZ1NTUUxsOUxvRkNTN2JNV2hRTWE0aUg3ZnJIb0Z2SHVlYzJ4am82aUZRdGNUQ1VrMUZzdUJOMllXZjNNdEYwcjdPOFZNaUFqYmFxSlNyMFlzREhOLVlzVGFuVzVMQkNNaGk4bkJ4aDRkTkE2cTZMNEllZGFacnc5YW41dFBuOFE2UUFvZmFmLWFZZHZLS3JEMA?oc=5" target="_blank" class="news-link"><div class="news-title">Concerns Surrounding Asian Energy Services' (NSE:ASIANENE) Performance - simplywall.st</div></a><div class="news-date">Wed, 27 May 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPSC1jMk1GRDZvajFWdm5rWFBLOWdEc2NvbXdpVFQxVmdySE01bnlkc01NRlU5VFJ5ZlBqalQ0LVlRQ3oxWFZ4YlR5bWp0THF6ZEwtdUJJczJYUkVpZktFTXZRb2hOTzM5ak96X1FFYzFXaWtfWnhhX013YVUybU1SQ05WQk10V2xMUnBNZHRzVWp5T0NtalktQ0JoXzlRbHAyNHl6OHQ5Sjl6d2k0QTdTenpn?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services schedules analyst meet on June 12 - scanx.trade</div></a><div class="news-date">Mon, 08 Jun 2026</div></div><div class="news-section-title">Industry News</div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxOaTFfYTVWUG9oUmpUQVNEaW0yckdGUmRZYmc4eHpna3Q4SWllUk1BVjRHMTIwZ2NwR3E3emVxWVphMzFYWVFjOHNEbFBlWXllQjNyRktub0w4NWZPVGRYdldhdzlIMjRsUWJOdTQySVg1cFlJeFBuRE1UZFBCbFlZcUdPV3JUbk1palUweVFwWWIxSE5ZYWQtSjkzanFCQzA4UTEycGZBU1FMYkpaWXE1akVwSTdOY3pLMDRZWWdhLUtsamxBLVlaMXNZM1ZsTHM2NDh6NGJLUlJkVEZNU0Uw0gHkAUFVX3lxTE9FZnVOeFlyVUw1c0U3bGR6SGNDc0o1VmFUY0VMNXdCZmp6UkdPWkdOclZkRG9LVVRmN3puU0U4bEZYOVl4Y3FXQ1JGQjFsTTVwNG5aTFpHUnJHR0RTVVlnTGk2bXI1OWhSLVlHclpVbGh2bzlhbDBoaFcyb2N0Z3BOUnJCYUZXcld2bkl1TEtKSEtxSGVzWlJEcjNremdHUnpWbGM3aV9oSkVXa0ZSUDhmeEpMdmxFWWVlQXlPYkxITGtYTk11UFhULVhoQWUxTm5LaXJWZFdIQzk0RWNzNDFQNEdDQw?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services Limited's (NSE:ASIANENE) Business Is Yet to Catch Up With Its Share Price - simplywall.st</div></a><div class="news-date">Wed, 30 Jul 2025</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNcU9XU003YTB0WThLZjZHaV9Rby1zamR2NV9RR2U5alhOYTl1VGlpb2pmQ0FtZUFTUjFBVmtVZ2JGd3FoTVpINUlXTUpGbzVTNEJ0MV9yUjJlMjdyajhhZWV0d19rOTQxRjIyaFhpcVctdWduSEhXU0w4THl1dnJEbnc0cWg1NGJqMVZvTTJyOFVfc1BEN19aQVhwOUoyY2txR3dCS1VR?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Wins ₹187.6 Crore Gujarat EPC Order; Shares Rise - HDFC Sky</div></a><div class="news-date">Mon, 22 Jun 2026</div></div><div class="news-item"><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxQdkNkTTdYSU5aVjdpc2NoSmtJVVlYUElzLUduOXVSNTdIb29fVGFKMmtYUmdBNjlaVzA1YjlJZWlwWTZ1b2h4SEJPRG1yLW5PUkViSkJrYlc2dUR0MDAyQ2xKSF9RMDJrbmZ6cVk2R1BJVGRodmVOM0JtUVRFU3JkbTJXeUNiTHVRdjZ6RlhnX1Q4VHZ5bEw0RWRxZXR0VHZ1bnhtZWx1WWFtMVEwSzJFSk5uZDdBTWF3MnprRjJybDhaUEZrZVprZ1BaQm1JMmg4Z3J0Ukw1My1JekRYcDhsYzZYc1ZOamt2OHhISVVSZGVTa2VwR0VCbw?oc=5" target="_blank" class="news-link"><div class="news-title">Asian Energy Services gains up to 5% after firm expands beyond Coal India, secures Rs 188-crore contract - TradingView</div></a><div class="news-date">Mon, 22 Jun 2026</div></div></div>
+<div class="tab-content" id="tab-1-fin" style="display:none"><div class="news-item">Financial data not available. Try /financials SYMBOL command.</div></div>
+<div class="tab-content" id="tab-1-peers" style="display:none"><div class="news-item">No peer data available</div></div>
+</div>
+<div class="footer">Data: Yahoo Finance · Screener.in · BSE · Google News &nbsp;|&nbsp; Personal use only</div>
+<script>
+function showStock(idx, el) {
+  document.querySelectorAll('.stock-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.stock-card').forEach((c, i) => {
+    c.style.display = i === idx ? 'block' : 'none';
+  });
+}
+function showTab(stockIdx, tab, el) {
+  var tabs = el.parentElement.querySelectorAll('.tab');
+  tabs.forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  ['price','tech','news','fin','peers'].forEach(t => {
+    var el2 = document.getElementById('tab-' + stockIdx + '-' + t);
+    if (el2) el2.style.display = t === tab ? 'block' : 'none';
+  });
+}
+</script>
+</body></html>
